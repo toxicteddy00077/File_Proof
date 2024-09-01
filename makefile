@@ -1,5 +1,5 @@
-C_DIR=../File_pipe      
-C_PROGRAM=file_authenticate          
+C_DIR=File_pipe      
+C_PROGRAM=File_pipe/file_authenticate          
 CIRCUIT_NAME=driver
 INPUT_FILE=input.json
 CURVE=bn128
@@ -8,10 +8,10 @@ CIRCOM_PATH=driver
 
 all: c_program compile_circuit witness setup proof verify
 
-run_c_program: $(C_DIR)/$(C_PROGRAM).c
+c_program: $(C_PROGRAM).c
 	@echo "Compiling and running C-program..."
-	gcc -o $(C_DIR)/$(C_PROGRAM) $(C_DIR)/$(C_PROGRAM).c
-	$(C_DIR)/$(C_PROGRAM) 
+	gcc -o $(C_PROGRAM) $(C_PROGRAM).c
+    $(C_PROGRAM) 
 
 compile_circuit: $(CIRCUIT_NAME).circom
 	@echo "Compiling Circom circuit..."
