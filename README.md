@@ -1,4 +1,4 @@
-#Zk-SNARK file ownership auhtenticator
+# Zk-SNARK file ownership auhtenticator
 
 A basic circom ciruit which proves that of a finite set over a field representing all possible permissions of file, the prover has atleast 'read' privilege.
 
