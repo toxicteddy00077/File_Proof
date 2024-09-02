@@ -10,7 +10,7 @@ all: c_program compile_circuit witness setup proof verify
 
 c_program: $(C_PROGRAM).c
 	@echo "Compiling and running C-program..."
-	gcc -o $(C_PROGRAM) $(C_PROGRAM).c
+	gcc $(C_PROGRAM).c -o $(C_PROGRAM)
     $(C_PROGRAM) 
 
 compile_circuit: $(CIRCUIT_NAME).circom
